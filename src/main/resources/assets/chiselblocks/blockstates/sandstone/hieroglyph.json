@@ -1,0 +1,70 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_0",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_1",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_2",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_3",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_4",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_5",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_6",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_7",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_8",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_9",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_10",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_11",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_12",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_13",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_14",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/sandstone/hieroglyph_15",
+                "weight": 1
+            }
+        ]
+    }
+}

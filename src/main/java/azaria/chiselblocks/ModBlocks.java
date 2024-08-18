@@ -4,6 +4,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,7 @@ public class ModBlocks {
 
     public static void addToRegistry (IEventBus eventBus) {
         Stone.init();
+        Sandstone.init();
         BLOCKS.register(eventBus);
     }
 
@@ -36,7 +38,7 @@ public class ModBlocks {
         public static final RegistryObject<Block> JELLYBEAN = registerStone("stone/jellybean");
         public static final RegistryObject<Block> LAYERED_BRICKS = registerStone("stone/layered_bricks");
         public static final RegistryObject<Block> PANEL = registerStone("stone/panel");
-        public static final RegistryObject<Block> PILLAR = registerStone("stone/pillar");
+        public static final RegistryObject<RotatedPillarBlock> PILLAR = registerStonePillar("stone/pillar");
         public static final RegistryObject<Block> PRISM = registerStone("stone/prism");
         public static final RegistryObject<Block> SLANTED = registerStone("stone/slanted");
         public static final RegistryObject<Block> TILE = registerStone("stone/tile");
@@ -45,6 +47,12 @@ public class ModBlocks {
         public static final RegistryObject<Block> WEAVER = registerStone("stone/weaver");
         public static final RegistryObject<Block> WINDMILL_BRICKS = registerStone("stone/windmill_bricks");
         public static final RegistryObject<Block> ZAG = registerStone("stone/zag");
+    }
+
+    public static class Sandstone {
+        public static void init () {}
+
+        public static final RegistryObject<Block> HIEROGLYPH = registerStone("sandstone/hieroglyph");
     }
 
     public static <T extends Block> RegistryObject<T> register (
@@ -69,6 +77,12 @@ public class ModBlocks {
         return ModBlocks.register(
             id,
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE))
+        );
+    }
+    private static RegistryObject<RotatedPillarBlock> registerStonePillar (String id) {
+        return ModBlocks.register(
+            id,
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE))
         );
     }
 }

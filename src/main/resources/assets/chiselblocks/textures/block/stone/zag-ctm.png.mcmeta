@@ -1,6 +1,10 @@
 {
     "ctm": {
         "ctm_version": 1,
-        "type": "ar"
+        "type": "pattern",
+        "extra": {
+            "size": 2
+        }
+
     }
 }

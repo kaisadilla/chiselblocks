@@ -1,6 +1,6 @@
 {
-  "ctm": {
-    "ctm_version": 1,
-    "proxy": "chiselblocks:block/stone/zag-ctm"
-  }
+    "ctm": {
+        "ctm_version": 1,
+        "proxy": "chiselblocks:block/stone/zag-ctm"
+    }
 }

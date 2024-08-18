@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:block/cube_column_horizontal",
     "textures": {
-        "end": "chiselbricks:block/stone/pillar_top",
-        "side": "chiselbricks:block/stone/pillar"
+        "end": "chiselblocks:block/stone/pillar_top",
+        "side": "chiselblocks:block/stone/pillar"
     }
 }

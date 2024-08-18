@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "chiselblocks:block/sandstone/hieroglyph_12",
+        "particle": "chiselblocks:block/sandstone/hieroglyph"
+    }
+}

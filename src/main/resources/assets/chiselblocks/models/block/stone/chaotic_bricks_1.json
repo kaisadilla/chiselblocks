@@ -1,7 +1,7 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "chiselblocks:block/stone/chaotic_bricks/1",
-        "particle": "chiselbricks:block/stone/chaotic_bricks"
+        "all": "chiselblocks:block/stone/chaotic_bricks_1",
+        "particle": "chiselblocks:block/stone/chaotic_bricks"
     }
 }

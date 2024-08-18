@@ -41,7 +41,7 @@ if (type === 'chaotic_bricks') {
         createBlockModel_randomPart(material, type, i);
     }
 
-    createItemModel_standard(material, type);
+    createItemModel_random(material, type);
 }
 else if (type === 'dent' || type === "panel" || type === "bordered_panel" || type === "weaver") {
     createBlockstate_square(material, type);
@@ -57,6 +57,16 @@ else if (type === 'pillar') {
     createBlockstate_pillar(material, type);
     createBlockModel_pillar(material, type);
     createItemModel_standard(material, type);
+}
+if (type === 'hieroglyph') {
+    const AMOUNT = 16;
+    createBlockstate_random(material, type, AMOUNT);
+
+    for (let i = 0; i < AMOUNT; i++) {
+        createBlockModel_randomPart(material, type, i);
+    }
+
+    createItemModel_random(material, type);
 }
 // standard 1x1 blocks.
 else if (STANDARD_BRICKS.includes(type)) {
@@ -127,16 +137,16 @@ function createBlockstate_giant2x2 (material, type) {
     const data = {
         "variants": {
             "": {
-                "model": `chiselbricks:block/${material}/${type}`
+                "model": `chiselblocks:block/${material}/${type}`
             }
         },
         "athena:loader": "athena:giant",
         "ctm_textures": {
-            "1": `chiselbricks:block/ctm/${material}/${type}/0`,
-            "2": `chiselbricks:block/ctm/${material}/${type}/1`,
-            "3": `chiselbricks:block/ctm/${material}/${type}/2`,
-            "4": `chiselbricks:block/ctm/${material}/${type}/3`,
-            "particle": `chiselbricks:block/${material}/${type}`
+            "1": `chiselblocks:block/ctm/${material}/${type}/0`,
+            "2": `chiselblocks:block/ctm/${material}/${type}/1`,
+            "3": `chiselblocks:block/ctm/${material}/${type}/2`,
+            "4": `chiselblocks:block/ctm/${material}/${type}/3`,
+            "particle": `chiselblocks:block/${material}/${type}`
         },
         "height": 2,
         "width": 2
@@ -170,15 +180,15 @@ function createBlockstate_pillar (material, type, amount) {
     const data = {
         "variants": {
             "axis=x": {
-                "model": `chiselbricks:block/${material}/${type}_horizontal`,
+                "model": `chiselblocks:block/${material}/${type}_horizontal`,
                 "x": 90,
                 "y": 90
             },
             "axis=y": {
-                "model": `chiselbricks:block/${material}/${type}`
+                "model": `chiselblocks:block/${material}/${type}`
             },
             "axis=z": {
-                "model": `chiselbricks:block/${material}/${type}_horizontal`,
+                "model": `chiselblocks:block/${material}/${type}_horizontal`,
                 "x": 90
             }
         }
@@ -206,8 +216,8 @@ function createBlockModel_randomPart (material, type, index) {
     const data = {
         "parent": "block/cube_all",
         "textures": {
-            "all": `chiselblocks:block/${material}/${type}/${index}`,
-            "particle": `chiselbricks:block/${material}/${type}`
+            "all": `chiselblocks:block/${material}/${type}_${index}`,
+            "particle": `chiselblocks:block/${material}/${type}`
         }
     };
 
@@ -221,15 +231,15 @@ function createBlockModel_pillar (material, type, index) {
     const data = {
         "parent": "minecraft:block/cube_column",
         "textures": {
-            "end": `chiselbricks:block/${material}/${type}_top`,
-            "side": `chiselbricks:block/${material}/${type}`
+            "end": `chiselblocks:block/${material}/${type}_top`,
+            "side": `chiselblocks:block/${material}/${type}`
         }
     };
     const dataHoriz = {
         "parent": "minecraft:block/cube_column_horizontal",
         "textures": {
-            "end": `chiselbricks:block/${material}/${type}_top`,
-            "side": `chiselbricks:block/${material}/${type}`
+            "end": `chiselblocks:block/${material}/${type}_top`,
+            "side": `chiselblocks:block/${material}/${type}`
         }
     };
 
@@ -242,6 +252,16 @@ function createItemModel_standard (material, type) {
 
     const data = {
         "parent": `chiselblocks:block/${material}/${type}`
+    }
+
+    fs.writeFileSync(path, JSON.stringify(data, null, 4));
+}
+
+function createItemModel_random (material, type, index = 0) {
+    const path = getItemModelPath(material) + "/" + type + ".json";
+
+    const data = {
+        "parent": `chiselblocks:block/${material}/${type}_${index}`
     }
 
     fs.writeFileSync(path, JSON.stringify(data, null, 4));
