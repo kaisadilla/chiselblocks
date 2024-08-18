@@ -1,7 +1,23 @@
 {
+    "block.chiselblocks.stone.bordered_panel": "Bordered Stone Panel",
     "block.chiselblocks.stone.braid": "Braid Stone",
+    "block.chiselblocks.stone.bricks_medium": "Medium Stone Bricks",
+    "block.chiselblocks.stone.bricks_small": "Small Stone Bricks",
     "block.chiselblocks.stone.chaotic_bricks": "Chaotic Stone Bricks",
     "block.chiselblocks.stone.cracked": "Cracked Stone",
     "block.chiselblocks.stone.dent": "Dent Stone",
-    "block.chiselblocks.stone.jellybean": "Jellybean Stone"
+    "block.chiselblocks.stone.jellybean": "Jellybean Stone",
+    "block.chiselblocks.stone.layered_bricks": "Layered Stone Bricks",
+    "block.chiselblocks.stone.panel": "Stone Panel",
+    "block.chiselblocks.stone.pillar": "Stone Pillar",
+    "block.chiselblocks.stone.prism": "Stone Prism",
+    "block.chiselblocks.stone.slanted": "Slanted Stone",
+    "block.chiselblocks.stone.tile": "Stone Tile",
+    "block.chiselblocks.stone.tiles_medium": "Medium Stone Tile",
+    "block.chiselblocks.stone.tiles_small": "Small Stone Tile",
+    "block.chiselblocks.stone.weaver": "Weaver Stone",
+    "block.chiselblocks.stone.windmill_bricks": "Windmill Stone Bricks",
+    "block.chiselblocks.stone.zag": "Stone Zag",
+
+    "itemgroup.chiselblocks": "Chisel Blocks"
 }

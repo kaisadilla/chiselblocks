@@ -26,11 +26,25 @@ public class ModBlocks {
     public static class Stone {
         public static void init () {}
 
+        public static final RegistryObject<Block> BORDERED_PANEL = registerStone("stone/bordered_panel");
         public static final RegistryObject<Block> BRAID = registerStone("stone/braid");
+        public static final RegistryObject<Block> BRICKS_MEDIUM = registerStone("stone/bricks_medium");
+        public static final RegistryObject<Block> BRICKS_SMALL = registerStone("stone/bricks_small");
         public static final RegistryObject<Block> CHAOTIC_BRICKS = registerStone("stone/chaotic_bricks");
         public static final RegistryObject<Block> CRACKED = registerStone("stone/cracked");
         public static final RegistryObject<Block> DENT = registerStone("stone/dent");
         public static final RegistryObject<Block> JELLYBEAN = registerStone("stone/jellybean");
+        public static final RegistryObject<Block> LAYERED_BRICKS = registerStone("stone/layered_bricks");
+        public static final RegistryObject<Block> PANEL = registerStone("stone/panel");
+        public static final RegistryObject<Block> PILLAR = registerStone("stone/pillar");
+        public static final RegistryObject<Block> PRISM = registerStone("stone/prism");
+        public static final RegistryObject<Block> SLANTED = registerStone("stone/slanted");
+        public static final RegistryObject<Block> TILE = registerStone("stone/tile");
+        public static final RegistryObject<Block> TILES_MEDIUM = registerStone("stone/tiles_medium");
+        public static final RegistryObject<Block> TILES_SMALL = registerStone("stone/tiles_small");
+        public static final RegistryObject<Block> WEAVER = registerStone("stone/weaver");
+        public static final RegistryObject<Block> WINDMILL_BRICKS = registerStone("stone/windmill_bricks");
+        public static final RegistryObject<Block> ZAG = registerStone("stone/zag");
     }
 
     public static <T extends Block> RegistryObject<T> register (

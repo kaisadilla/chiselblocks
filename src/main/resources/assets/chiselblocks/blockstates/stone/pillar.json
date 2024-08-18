@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "axis=x": {
+            "model": "chiselbricks:block/stone/pillar_horizontal",
+            "x": 90,
+            "y": 90
+        },
+        "axis=y": {
+            "model": "chiselbricks:block/stone/pillar"
+        },
+        "axis=z": {
+            "model": "chiselbricks:block/stone/pillar_horizontal",
+            "x": 90
+        }
+    }
+}

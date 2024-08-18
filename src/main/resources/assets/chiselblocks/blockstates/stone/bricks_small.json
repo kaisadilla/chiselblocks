@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/stone/bricks_small"
+        }
+    }
+}

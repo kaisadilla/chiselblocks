@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/stone/weaver"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/stone/weaver/4",
+        "empty": "chiselblocks:block/ctm/stone/weaver/1",
+        "horizontal": "chiselblocks:block/ctm/stone/weaver/3",
+        "particle": "chiselblocks:block/ctm/stone/weaver/0",
+        "vertical": "chiselblocks:block/ctm/stone/weaver/2"
+    }
+}

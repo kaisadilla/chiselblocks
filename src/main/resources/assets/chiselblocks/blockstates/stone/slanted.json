@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselbricks:block/stone/slanted"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselbricks:block/ctm/stone/slanted/0",
+        "2": "chiselbricks:block/ctm/stone/slanted/1",
+        "3": "chiselbricks:block/ctm/stone/slanted/2",
+        "4": "chiselbricks:block/ctm/stone/slanted/3",
+        "particle": "chiselbricks:block/stone/slanted"
+    },
+    "height": 2,
+    "width": 2
+}
