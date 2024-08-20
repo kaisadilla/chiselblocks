@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/planks/oak/shipping_crate"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/planks/oak/shipping_crate/4",
+        "empty": "chiselblocks:block/ctm/planks/oak/shipping_crate/1",
+        "horizontal": "chiselblocks:block/ctm/planks/oak/shipping_crate/3",
+        "particle": "chiselblocks:block/ctm/planks/oak/shipping_crate/0",
+        "vertical": "chiselblocks:block/ctm/planks/oak/shipping_crate/2"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/granite/zag"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselblocks:block/ctm/granite/zag/0",
+        "2": "chiselblocks:block/ctm/granite/zag/1",
+        "3": "chiselblocks:block/ctm/granite/zag/2",
+        "4": "chiselblocks:block/ctm/granite/zag/3",
+        "particle": "chiselblocks:block/granite/zag"
+    },
+    "height": 2,
+    "width": 2
+}

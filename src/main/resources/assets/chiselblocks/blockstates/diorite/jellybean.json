@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/diorite/jellybean"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselblocks:block/ctm/diorite/jellybean/0",
+        "2": "chiselblocks:block/ctm/diorite/jellybean/1",
+        "3": "chiselblocks:block/ctm/diorite/jellybean/2",
+        "4": "chiselblocks:block/ctm/diorite/jellybean/3",
+        "particle": "chiselblocks:block/diorite/jellybean"
+    },
+    "height": 2,
+    "width": 2
+}

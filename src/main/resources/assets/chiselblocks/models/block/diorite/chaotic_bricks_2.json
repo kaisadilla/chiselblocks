@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "chiselblocks:block/diorite/chaotic_bricks_2",
+        "particle": "chiselblocks:block/diorite/chaotic_bricks"
+    }
+}

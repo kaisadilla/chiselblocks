@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/andesite/slanted"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselblocks:block/ctm/andesite/slanted/0",
+        "2": "chiselblocks:block/ctm/andesite/slanted/1",
+        "3": "chiselblocks:block/ctm/andesite/slanted/2",
+        "4": "chiselblocks:block/ctm/andesite/slanted/3",
+        "particle": "chiselblocks:block/andesite/slanted"
+    },
+    "height": 2,
+    "width": 2
+}

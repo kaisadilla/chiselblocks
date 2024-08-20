@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/planks/oak/smooth"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/planks/oak/smooth/4",
+        "empty": "chiselblocks:block/ctm/planks/oak/smooth/1",
+        "horizontal": "chiselblocks:block/ctm/planks/oak/smooth/3",
+        "particle": "chiselblocks:block/ctm/planks/oak/smooth/0",
+        "vertical": "chiselblocks:block/ctm/planks/oak/smooth/2"
+    }
+}

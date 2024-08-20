@@ -1,0 +1,9 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "ctm",
+        "textures": [
+            "chiselblocks:block/andesite/bordered_panel-ctm"
+        ]
+    }
+}

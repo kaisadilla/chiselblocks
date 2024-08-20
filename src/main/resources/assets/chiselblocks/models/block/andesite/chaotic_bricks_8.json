@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "chiselblocks:block/andesite/chaotic_bricks_8",
+        "particle": "chiselblocks:block/andesite/chaotic_bricks"
+    }
+}

@@ -1,84 +1,124 @@
 /* note:
   renames:
-  - tiles_large -> panel,
   - panel -> tile,
+  - tiles_large -> panel,
   - layers -> layered_bricks,
   - mosaic -> bordered_panel,
   - road -> windmill_bricks,
-  - triple_bricks - medium_bricks
+  - triple_bricks -> bricks_medium
+  - small_bricks -> bricks_small
+  - pillar-side -> pillar
+  - pillar-top -> pillar_top
+  PLANKS:
+  create: - tile from smooth
 */
 
-const STANDARD_BRICKS = [
+// regex for tags: public [^\n]* = registerStone\("
+
+const STANDARD_STONE_BLOCKS = [
     "braid",
     "cracked",
     "layered_bricks",
     "tile",
     "prism",
     "windmill_bricks",
-    "small_bricks",
-    "medium_bricks",
+    "bricks_small",
+    "bricks_medium",
     "tiles_medium",
     "tiles_small",
+];
+const STANDARD_PLANKS_BLOCKS = [
+    "crude_paneling",
+    "large",
+    "stacked",
+    "tile",
 ];
 
 const fs = require("fs");
 
-let material = process.argv[2];
-let type = process.argv[3];
+let type = process.argv[2];
+let material = process.argv[3];
+let pattern = process.argv[4];
 
-console.log(`Creating assets for block with id '${material}/${type}'.`);
+console.log(`Creating assets for block with id '${material}/${pattern}'.`);
 
 fs.mkdirSync(getBsPath(material), { recursive: true });
 fs.mkdirSync(getBlockModelPath(material), { recursive: true });
 fs.mkdirSync(getItemModelPath(material), { recursive: true });
 fs.mkdirSync(getLootTablePath(material), { recursive: true });
 
-if (type === 'chaotic_bricks') {
-    const AMOUNT = 9;
-    createBlockstate_random(material, type, AMOUNT);
-
-    for (let i = 0; i < AMOUNT; i++) {
-        createBlockModel_randomPart(material, type, i);
+if (type === 'stone') {
+    if (pattern === 'chaotic_bricks') {
+        const AMOUNT = 9;
+        createBlockstate_random(material, pattern, AMOUNT);
+    
+        for (let i = 0; i < AMOUNT; i++) {
+            createBlockModel_randomPart(material, pattern, i);
+        }
+    
+        createItemModel_random(material, pattern);
     }
-
-    createItemModel_random(material, type);
-}
-else if (type === 'dent' || type === "panel" || type === "bordered_panel" || type === "weaver") {
-    createBlockstate_square(material, type);
-    createBlockModel_standard(material, type);
-    createItemModel_standard(material, type);
-}
-else if (type === 'jellybean' || type === "slanted" || type === "zag") {
-    createBlockstate_giant2x2(material, type);
-    createBlockModel_standard(material, type);
-    createItemModel_standard(material, type);
-}
-else if (type === 'pillar') {
-    createBlockstate_pillar(material, type);
-    createBlockModel_pillar(material, type);
-    createItemModel_standard(material, type);
-}
-if (type === 'hieroglyph') {
-    const AMOUNT = 16;
-    createBlockstate_random(material, type, AMOUNT);
-
-    for (let i = 0; i < AMOUNT; i++) {
-        createBlockModel_randomPart(material, type, i);
+    else if (pattern === 'dent' || pattern === "panel" || pattern === "bordered_panel" || pattern === "weaver") {
+        createBlockstate_square(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
     }
+    else if (pattern === 'jellybean' || pattern === "slanted" || pattern === "zag") {
+        createBlockstate_giant2x2(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else if (pattern === 'pillar') {
+        createBlockstate_pillar(material, pattern);
+        createBlockModel_pillar(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else if (pattern === 'hieroglyph') {
+        const AMOUNT = 16;
+        createBlockstate_random(material, pattern, AMOUNT);
+    
+        for (let i = 0; i < AMOUNT; i++) {
+            createBlockModel_randomPart(material, pattern, i);
+        }
+    
+        createItemModel_random(material, pattern);
+    }
+    // standard 1x1 blocks.
+    else if (STANDARD_STONE_BLOCKS.includes(pattern)) {
+        createBlockstate_standard(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else {
+        console.error(`ERROR: Undefined type: ${pattern}.`);
+    }
+}
+else if (type === 'planks') {
+    if (pattern === 'braced') {
+        // side
+    }
+    else if (pattern === 'braid' || pattern === 'encased_large' || pattern === 'encased' || pattern === 'encased_smooth' || pattern === 'paneling' || pattern === 'shipping_crate' || pattern === 'smooth') {
+        createBlockstate_square(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else if (pattern === 'crude_horizontal' || pattern === 'crude_vertical') {
+        createBlockstate_giant2x2(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    // standard 1x1 blocks.
+    else if (STANDARD_PLANKS_BLOCKS.includes(pattern)) {
+        createBlockstate_standard(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else {
+        console.error(`ERROR: Undefined type: ${pattern}.`);
+    }
+}
 
-    createItemModel_random(material, type);
-}
-// standard 1x1 blocks.
-else if (STANDARD_BRICKS.includes(type)) {
-    createBlockstate_standard(material, type);
-    createBlockModel_standard(material, type);
-    createItemModel_standard(material, type);
-}
-else {
-    console.error(`ERROR: Undefined type: ${type}.`);
-}
-
-createLootTable(material, type);
+createLootTable(material, pattern);
 
 // FUNCTIONS
 

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/andesite/layered_bricks"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/planks/oak/crude_paneling"
+        }
+    }
+}

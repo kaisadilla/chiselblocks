@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/granite/jellybean"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselblocks:block/ctm/granite/jellybean/0",
+        "2": "chiselblocks:block/ctm/granite/jellybean/1",
+        "3": "chiselblocks:block/ctm/granite/jellybean/2",
+        "4": "chiselblocks:block/ctm/granite/jellybean/3",
+        "particle": "chiselblocks:block/granite/jellybean"
+    },
+    "height": 2,
+    "width": 2
+}

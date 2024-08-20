@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/diorite/slanted"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselblocks:block/ctm/diorite/slanted/0",
+        "2": "chiselblocks:block/ctm/diorite/slanted/1",
+        "3": "chiselblocks:block/ctm/diorite/slanted/2",
+        "4": "chiselblocks:block/ctm/diorite/slanted/3",
+        "particle": "chiselblocks:block/diorite/slanted"
+    },
+    "height": 2,
+    "width": 2
+}

@@ -1,0 +1,17 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/planks/oak/crude_vertical"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselblocks:block/ctm/planks/oak/crude_vertical/0",
+        "2": "chiselblocks:block/ctm/planks/oak/crude_vertical/1",
+        "3": "chiselblocks:block/ctm/planks/oak/crude_vertical/2",
+        "4": "chiselblocks:block/ctm/planks/oak/crude_vertical/3",
+        "particle": "chiselblocks:block/planks/oak/crude_vertical"
+    },
+    "height": 2,
+    "width": 2
+}

@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/diorite/panel"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/diorite/panel/4",
+        "empty": "chiselblocks:block/ctm/diorite/panel/1",
+        "horizontal": "chiselblocks:block/ctm/diorite/panel/3",
+        "particle": "chiselblocks:block/ctm/diorite/panel/0",
+        "vertical": "chiselblocks:block/ctm/diorite/panel/2"
+    }
+}

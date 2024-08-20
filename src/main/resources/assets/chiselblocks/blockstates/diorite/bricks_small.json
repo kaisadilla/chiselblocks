@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/diorite/bricks_small"
+        }
+    }
+}

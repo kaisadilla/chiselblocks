@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/planks/oak/encased_smooth"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/planks/oak/encased_smooth/4",
+        "empty": "chiselblocks:block/ctm/planks/oak/encased_smooth/1",
+        "horizontal": "chiselblocks:block/ctm/planks/oak/encased_smooth/3",
+        "particle": "chiselblocks:block/ctm/planks/oak/encased_smooth/0",
+        "vertical": "chiselblocks:block/ctm/planks/oak/encased_smooth/2"
+    }
+}
