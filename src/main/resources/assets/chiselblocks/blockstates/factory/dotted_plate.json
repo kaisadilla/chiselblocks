@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/dotted_plate"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/dotted_plate/4",
+        "empty": "chiselblocks:block/ctm/factory/dotted_plate/1",
+        "horizontal": "chiselblocks:block/ctm/factory/dotted_plate/3",
+        "particle": "chiselblocks:block/ctm/factory/dotted_plate/0",
+        "vertical": "chiselblocks:block/ctm/factory/dotted_plate/2"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "break_metal": {
+        "subtitle": "subtitles.block.generic.break",
+        "sounds": [
+            "chiselblocks:dig/metal",
+            "chiselblocks:dig/metal1",
+            "chiselblocks:dig/metal2",
+            "chiselblocks:dig/metal3",
+            "chiselblocks:dig/metal7",
+            "chiselblocks:dig/metal8"
+        ]
+    },
+    "fall_metal": {
+        "subtitle": "subtitles.block.generic.fall",
+        "sounds": [
+            "chiselblocks:step/metal4",
+            "chiselblocks:step/metal5",
+            "chiselblocks:step/metal6",
+            "chiselblocks:step/metal9"
+        ]
+    },
+    "hit_metal": {
+        "subtitle": "subtitles.block.generic.hit",
+        "sounds": [
+            "chiselblocks:step/metal4",
+            "chiselblocks:step/metal5",
+            "chiselblocks:step/metal6",
+            "chiselblocks:step/metal9"
+        ]
+    },
+    "place_metal": {
+        "subtitle": "subtitles.block.generic.place",
+        "sounds": [
+            "chiselblocks:dig/metal",
+            "chiselblocks:dig/metal1",
+            "chiselblocks:dig/metal2",
+            "chiselblocks:dig/metal3",
+            "chiselblocks:dig/metal7",
+            "chiselblocks:dig/metal8"
+        ]
+    },
+    "step_metal": {
+        "subtitle": "subtitles.block.generic.footsteps",
+        "sounds": [
+            "chiselblocks:step/metal4",
+            "chiselblocks:step/metal5",
+            "chiselblocks:step/metal6",
+            "chiselblocks:step/metal9"
+        ]
+    }
+}

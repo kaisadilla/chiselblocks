@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/exhaust_plating"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/exhaust_plating/4",
+        "empty": "chiselblocks:block/ctm/factory/exhaust_plating/1",
+        "horizontal": "chiselblocks:block/ctm/factory/exhaust_plating/3",
+        "particle": "chiselblocks:block/ctm/factory/exhaust_plating/0",
+        "vertical": "chiselblocks:block/ctm/factory/exhaust_plating/2"
+    }
+}

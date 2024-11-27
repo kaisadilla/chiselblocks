@@ -1,18 +1,26 @@
 package azaria.chiselblocks;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -28,6 +36,8 @@ public class ModBlocks {
         Sandstone.init();
 
         Planks_Oak.init();
+
+        Factory.init();
         BLOCKS.register(eventBus);
     }
 
@@ -151,11 +161,58 @@ public class ModBlocks {
         public static final RegistryObject<Block> TILE = registerPlanks("planks/oak/tile");
     }
 
+    public static class Factory {
+        public static void init () {}
+
+        public static final RegistryObject<Block> PLATE_RUSTY = registerFactory("factory/rusty_plate");
+        public static final RegistryObject<Block> PLATE_VERY_RUSTY = registerFactory("factory/very_rusty_plate");
+        public static final RegistryObject<Block> DOTTED_PLATE = registerFactory("factory/dotted_plate");
+        public static final RegistryObject<Block> DOTTED_PLATE_RUSTY = registerFactory("factory/rusty_dotted_plate");
+        public static final RegistryObject<Block> PLATE_BLUE_FRAME = registerFactory("factory/plate_blue_frame");
+        public static final RegistryObject<Block> PLATE_BLUE = registerFactory("factory/plate_blue");
+        public static final RegistryObject<Block> WIREFRAME_WHITE = registerFactory("factory/wireframe_white");
+        public static final RegistryObject<Block> WIREFRAME_PURPLE = registerFactory("factory/wireframe_purple");
+        public static final RegistryObject<Block> WIREFRAME_BLUE = registerFactory("factory/wireframe_blue");
+        public static final RegistryObject<Block> CAUTION_YELLOW = registerFactory("factory/caution_yellow");
+        public static final RegistryObject<Block> CAUTION_ORANGE = registerFactory("factory/caution_orange");
+        public static final RegistryObject<Block> MOSAIC = registerFactory("factory/mosaic");
+        public static final RegistryObject<Block> METAL_BOX = registerFactory("factory/metal_box");
+        public static final RegistryObject<Block> PLATE_GOLD = registerFactory("factory/plate_gold");
+        public static final RegistryObject<Block> PLATE_PURPLE = registerFactory("factory/plate_purple");
+        public static final RegistryObject<Block> GRINDER = registerFactory("factory/grinder");
+        public static final RegistryObject<Block> OLD_VENTS = registerFactory("factory/old_vents");
+        public static final RegistryObject<Block> TILE_RUSTY = registerFactory("factory/tile_rusty");
+        public static final RegistryObject<Block> BOLTED_TILE_RUSTY = registerFactory("factory/bolted_tile_rusty");
+        public static final RegistryObject<Block> TILE_WEATHERED_GREEN = registerFactory("factory/tile_weathered_green");
+        public static final RegistryObject<Block> TILE_WEATHERED_ORANGE = registerFactory("factory/tile_weathered_orange");
+        public static final RegistryObject<Block> MAKESHIFT_PANELS = registerFactory("factory/makeshift_panels");
+        public static final RegistryObject<Block> STURDY = registerFactory("factory/sturdy");
+        public static final RegistryObject<Block> WALL_DANGEROUS = registerFactory("factory/wall_dangerous");
+        public static final RegistryObject<Block> INSULATION = registerFactory("factory/insulation");
+        public static final RegistryObject<Block> GRATE = registerFactory("factory/grate");
+        public static final RegistryObject<Block> GRATE_RUSTY = registerFactory("factory/grate_rusty");
+        public static final RegistryObject<Block> HEXAGONAL_PLATES = registerFactory("factory/hexagonal_plates");
+        public static final RegistryObject<RotatedPillarBlock> COLUMN = registerFactoryPillar("factory/column");
+        public static final RegistryObject<Block> EXHAUST_PLATING = registerFactory("factory/exhaust_plating");
+        public static final RegistryObject<Block> PIPES = registerFactory("factory/pipes");
+        public static final RegistryObject<RotatedPillarBlock> FAN = registerFactoryPillar("factory/fan");
+        public static final RegistryObject<RotatedPillarBlock> FAN_MALFUNCTIONING = registerFactoryPillar("factory/fan_malfunctioning");
+        public static final RegistryObject<RotatedPillarBlock> FAN_BROKEN = registerFactoryPillar("factory/fan_broken");
+    }
+
     public static <T extends Block> RegistryObject<T> register (
         String name, Supplier<T> block
     ) {
         RegistryObject<T> blockObj = BLOCKS.register(name, block);
         registerBlockItem(name, blockObj, ModCreativeModeTabs.CHISEL_BLOCKS_TAB);
+        return blockObj;
+    }
+
+    public static <T extends Block> RegistryObject<T> registerWithTooltip (
+        String name, Supplier<T> block
+    ) {
+        RegistryObject<T> blockObj = BLOCKS.register(name, block);
+        registerBlockItemWithTooltip(name, blockObj, ModCreativeModeTabs.CHISEL_BLOCKS_TAB);
         return blockObj;
     }
 
@@ -165,6 +222,29 @@ public class ModBlocks {
         return ModItems.register(
             name,
             () -> new BlockItem(block.get(), new Item.Properties().tab(tab))
+        );
+    }
+
+    private static <T extends Block> RegistryObject<Item> registerBlockItemWithTooltip (
+        String name, RegistryObject<T> block, CreativeModeTab tab
+    ) {
+        return ModItems.register(
+            name,
+            () -> new BlockItem(block.get(), new Item.Properties().tab(tab)) {
+                @Override
+                public void appendHoverText (
+                    ItemStack item,
+                    @Nullable Level level,
+                    List<Component> components,
+                    TooltipFlag flag
+                ) {
+                    components.add(Component.translatable(
+                        "item." + ChiselBlocks.MOD_ID + "." + name.replaceAll("/", ".") + ".tooltip"
+                    ).withStyle(ChatFormatting.GRAY));
+
+                    super.appendHoverText(item, level, components, flag);
+                }
+            }
         );
     }
 
@@ -185,6 +265,22 @@ public class ModBlocks {
         return ModBlocks.register(
             id,
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS))
+        );
+    }
+    private static RegistryObject<Block> registerFactory (String id) {
+        return ModBlocks.registerWithTooltip(
+            id,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                .sound(ModSounds.METAL_BLOCK_SOUNDS)
+            )
+        );
+    }
+    private static RegistryObject<RotatedPillarBlock> registerFactoryPillar (String id) {
+        return ModBlocks.registerWithTooltip(
+            id,
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                .sound(ModSounds.METAL_BLOCK_SOUNDS)
+            )
         );
     }
 }

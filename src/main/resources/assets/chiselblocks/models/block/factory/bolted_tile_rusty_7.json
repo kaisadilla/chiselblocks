@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "chiselblocks:block/factory/bolted_tile_rusty_7",
+        "particle": "chiselblocks:block/factory/bolted_tile_rusty"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/wall_dangerous"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/wall_dangerous/4",
+        "empty": "chiselblocks:block/ctm/factory/wall_dangerous/1",
+        "horizontal": "chiselblocks:block/ctm/factory/wall_dangerous/3",
+        "particle": "chiselblocks:block/ctm/factory/wall_dangerous/0",
+        "vertical": "chiselblocks:block/ctm/factory/wall_dangerous/2"
+    }
+}

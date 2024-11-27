@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "axis=x": {
+            "model": "chiselblocks:block/factory/fan_malfunctioning_horizontal",
+            "x": 90,
+            "y": 90
+        },
+        "axis=y": {
+            "model": "chiselblocks:block/factory/fan_malfunctioning"
+        },
+        "axis=z": {
+            "model": "chiselblocks:block/factory/fan_malfunctioning_horizontal",
+            "x": 90
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/plate_blue_frame"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/plate_blue_frame/4",
+        "empty": "chiselblocks:block/ctm/factory/plate_blue_frame/1",
+        "horizontal": "chiselblocks:block/ctm/factory/plate_blue_frame/3",
+        "particle": "chiselblocks:block/ctm/factory/plate_blue_frame/0",
+        "vertical": "chiselblocks:block/ctm/factory/plate_blue_frame/2"
+    }
+}

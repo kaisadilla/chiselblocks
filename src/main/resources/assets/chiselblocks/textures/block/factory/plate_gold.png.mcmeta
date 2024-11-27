@@ -1,0 +1,9 @@
+{
+    "ctm": {
+        "ctm_version": 1,
+        "type": "ctm",
+        "textures": [
+            "chiselblocks:block/factory/plate_gold-ctm"
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/wireframe_white"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/wireframe_white/4",
+        "empty": "chiselblocks:block/ctm/factory/wireframe_white/1",
+        "horizontal": "chiselblocks:block/ctm/factory/wireframe_white/3",
+        "particle": "chiselblocks:block/ctm/factory/wireframe_white/0",
+        "vertical": "chiselblocks:block/ctm/factory/wireframe_white/2"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/hexagonal_plates"
+        }
+    },
+    "athena:loader": "athena:giant",
+    "ctm_textures": {
+        "1": "chiselblocks:block/ctm/factory/hexagonal_plates/0",
+        "2": "chiselblocks:block/ctm/factory/hexagonal_plates/1",
+        "3": "chiselblocks:block/ctm/factory/hexagonal_plates/2",
+        "4": "chiselblocks:block/ctm/factory/hexagonal_plates/3",
+        "5": "chiselblocks:block/ctm/factory/hexagonal_plates/4",
+        "6": "chiselblocks:block/ctm/factory/hexagonal_plates/5",
+        "7": "chiselblocks:block/ctm/factory/hexagonal_plates/6",
+        "8": "chiselblocks:block/ctm/factory/hexagonal_plates/7",
+        "9": "chiselblocks:block/ctm/factory/hexagonal_plates/8",
+        "particle": "chiselblocks:block/factory/hexagonal_plates"
+    },
+    "height": 3,
+    "width": 3
+}

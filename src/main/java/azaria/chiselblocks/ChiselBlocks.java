@@ -32,6 +32,7 @@ public class ChiselBlocks {
 
         ModItems.addToRegistry(modEventBus);
         ModBlocks.addToRegistry(modEventBus);
+        ModSounds.addToRegistry(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

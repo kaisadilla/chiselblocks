@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/caution_orange"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/caution_orange/4",
+        "empty": "chiselblocks:block/ctm/factory/caution_orange/1",
+        "horizontal": "chiselblocks:block/ctm/factory/caution_orange/3",
+        "particle": "chiselblocks:block/ctm/factory/caution_orange/0",
+        "vertical": "chiselblocks:block/ctm/factory/caution_orange/2"
+    }
+}

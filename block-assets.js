@@ -33,9 +33,13 @@ const STANDARD_PLANKS_BLOCKS = [
     "stacked",
     "tile",
 ];
+const STANDARD_FACTORY_BLOCKS = [
+    "rusty_dotted_plate",
+];
 
 const fs = require("fs");
 
+// node block-assets.js stone andesite braid
 let type = process.argv[2];
 let material = process.argv[3];
 let pattern = process.argv[4];
@@ -111,6 +115,63 @@ else if (type === 'planks') {
     else if (STANDARD_PLANKS_BLOCKS.includes(pattern)) {
         createBlockstate_standard(material, pattern);
         createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else {
+        console.error(`ERROR: Undefined type: ${pattern}.`);
+    }
+}
+else if (type === 'factory') {
+    if (pattern === 'old_vents' || pattern === 'bolted_tile_rusty') {
+        const AMOUNT = 9;
+        createBlockstate_random(material, pattern, AMOUNT);
+    
+        for (let i = 0; i < AMOUNT; i++) {
+            createBlockModel_randomPart(material, pattern, i);
+        }
+    
+        createItemModel_random(material, pattern);
+    }
+    else if (pattern === 'tile_weathered_green' || pattern === 'tile_weathered_orange') {
+        const AMOUNT = 4;
+        createBlockstate_random(material, pattern, AMOUNT);
+    
+        for (let i = 0; i < AMOUNT; i++) {
+            createBlockModel_randomPart(material, pattern, i);
+        }
+    
+        createItemModel_random(material, pattern);
+    }
+    else if (pattern === 'rusty_dotted_plate' || pattern === 'rusty_plate' || pattern === 'very_rusty_plate' || pattern === 'dotted_plate'
+        || pattern === 'wireframe_white' || pattern === 'wireframe_purple' || pattern === 'caution_yellow' || pattern === 'caution_orange'
+        || pattern === 'mosaic' || pattern === 'plate_gold' || pattern === 'plate_purple' || pattern === 'grinder' || pattern === 'tile_rusty'
+        || pattern === 'plate_blue_frame' || pattern === 'plate_blue' || pattern === 'mosaic_blue' || pattern === 'exhaust_plating'
+        || pattern === 'pipes' || pattern === 'wireframe_blue' || pattern === 'wall_dangerous' || pattern === 'insulation'
+        || pattern === 'grate' || pattern === 'grate_rusty' || pattern === 'sturdy'
+    ) {
+        createBlockstate_square(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else if (pattern === 'metal_box') {
+        createBlockstate_standard(material, pattern);
+        createBlockModel_sides(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else if (pattern === 'makeshift_panels' || pattern === 'hexagonal_plates') {
+        createBlockstate_giant3x3(material, pattern);
+        createBlockModel_standard(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    // column complex ctm pillar (not implemented)
+    else if (pattern === 'column') {
+        createBlockstate_pillar(material, pattern);
+        createBlockModel_pillar(material, pattern);
+        createItemModel_standard(material, pattern);
+    }
+    else if (pattern === 'fan' || pattern === 'fan_malfunctioning' || pattern === "fan_broken") {
+        createBlockstate_pillar(material, pattern);
+        createBlockModel_pillar(material, pattern);
         createItemModel_standard(material, pattern);
     }
     else {
@@ -195,6 +256,35 @@ function createBlockstate_giant2x2 (material, type) {
     fs.writeFileSync(path, JSON.stringify(data, null, 4));
 }
 
+function createBlockstate_giant3x3 (material, type) {
+    const path = getBsPath(material) + "/" + type + ".json";
+
+    const data = {
+        "variants": {
+            "": {
+                "model": `chiselblocks:block/${material}/${type}`
+            }
+        },
+        "athena:loader": "athena:giant",
+        "ctm_textures": {
+            "1": `chiselblocks:block/ctm/${material}/${type}/0`,
+            "2": `chiselblocks:block/ctm/${material}/${type}/1`,
+            "3": `chiselblocks:block/ctm/${material}/${type}/2`,
+            "4": `chiselblocks:block/ctm/${material}/${type}/3`,
+            "5": `chiselblocks:block/ctm/${material}/${type}/4`,
+            "6": `chiselblocks:block/ctm/${material}/${type}/5`,
+            "7": `chiselblocks:block/ctm/${material}/${type}/6`,
+            "8": `chiselblocks:block/ctm/${material}/${type}/7`,
+            "9": `chiselblocks:block/ctm/${material}/${type}/8`,
+            "particle": `chiselblocks:block/${material}/${type}`
+        },
+        "height": 3,
+        "width": 3
+    };
+
+    fs.writeFileSync(path, JSON.stringify(data, null, 4));
+}
+
 function createBlockstate_random (material, type, amount) {
     const path = getBsPath(material) + "/" + type + ".json";
 
@@ -264,7 +354,7 @@ function createBlockModel_randomPart (material, type, index) {
     fs.writeFileSync(path, JSON.stringify(data, null, 4));
 }
 
-function createBlockModel_pillar (material, type, index) {
+function createBlockModel_pillar (material, type) {
     const path = getBlockModelPath(material) + "/" + type + ".json";
     const pathHoriz = getBlockModelPath(material) + "/" + type + "_horizontal.json";
 
@@ -285,6 +375,21 @@ function createBlockModel_pillar (material, type, index) {
 
     fs.writeFileSync(path, JSON.stringify(data, null, 4));
     fs.writeFileSync(pathHoriz, JSON.stringify(dataHoriz, null, 4));
+}
+
+function createBlockModel_sides (material, type) {
+    const path = getBlockModelPath(material) + "/" + type + ".json";
+
+    const data = {
+        "parent": "minecraft:block/cube_bottom_top",
+        "textures": {
+            "top": `chiselblocks:block/${material}/${type}_top`,
+            "bottom": `chiselblocks:block/${material}/${type}_top`,
+            "side": `chiselblocks:block/${material}/${type}_side`
+        }
+    };
+
+    fs.writeFileSync(path, JSON.stringify(data, null, 4));
 }
 
 function createItemModel_standard (material, type) {

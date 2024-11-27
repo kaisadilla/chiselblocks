@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "chiselblocks:block/factory/tile_weathered_green_3",
+        "particle": "chiselblocks:block/factory/tile_weathered_green"
+    }
+}

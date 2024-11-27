@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "top": "chiselblocks:block/factory/metal_box_top",
+        "bottom": "chiselblocks:block/factory/metal_box_top",
+        "side": "chiselblocks:block/factory/metal_box_side"
+    }
+}

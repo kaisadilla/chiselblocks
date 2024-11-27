@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/tile_rusty"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/tile_rusty/4",
+        "empty": "chiselblocks:block/ctm/factory/tile_rusty/1",
+        "horizontal": "chiselblocks:block/ctm/factory/tile_rusty/3",
+        "particle": "chiselblocks:block/ctm/factory/tile_rusty/0",
+        "vertical": "chiselblocks:block/ctm/factory/tile_rusty/2"
+    }
+}

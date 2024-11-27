@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/sturdy"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/sturdy/4",
+        "empty": "chiselblocks:block/ctm/factory/sturdy/1",
+        "horizontal": "chiselblocks:block/ctm/factory/sturdy/3",
+        "particle": "chiselblocks:block/ctm/factory/sturdy/0",
+        "vertical": "chiselblocks:block/ctm/factory/sturdy/2"
+    }
+}

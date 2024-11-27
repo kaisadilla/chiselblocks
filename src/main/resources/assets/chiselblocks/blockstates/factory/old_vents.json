@@ -1,0 +1,42 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "chiselblocks:block/factory/old_vents_0",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_1",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_2",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_3",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_4",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_5",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_6",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_7",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/old_vents_8",
+                "weight": 1
+            }
+        ]
+    }
+}

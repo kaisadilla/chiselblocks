@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "chiselblocks:block/factory/column_top",
+        "side": "chiselblocks:block/factory/column"
+    }
+}

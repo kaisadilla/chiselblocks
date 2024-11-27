@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/pipes"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/pipes/4",
+        "empty": "chiselblocks:block/ctm/factory/pipes/1",
+        "horizontal": "chiselblocks:block/ctm/factory/pipes/3",
+        "particle": "chiselblocks:block/ctm/factory/pipes/0",
+        "vertical": "chiselblocks:block/ctm/factory/pipes/2"
+    }
+}

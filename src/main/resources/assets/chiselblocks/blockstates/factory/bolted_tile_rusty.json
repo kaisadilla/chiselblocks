@@ -1,0 +1,42 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_0",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_1",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_2",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_3",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_4",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_5",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_6",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_7",
+                "weight": 1
+            },
+            {
+                "model": "chiselblocks:block/factory/bolted_tile_rusty_8",
+                "weight": 1
+            }
+        ]
+    }
+}

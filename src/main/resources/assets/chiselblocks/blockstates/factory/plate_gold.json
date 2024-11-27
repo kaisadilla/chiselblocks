@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": {
+            "model": "chiselblocks:block/factory/plate_gold"
+        }
+    },
+    "athena:loader": "athena:ctm",
+    "ctm_textures": {
+        "center": "chiselblocks:block/ctm/factory/plate_gold/4",
+        "empty": "chiselblocks:block/ctm/factory/plate_gold/1",
+        "horizontal": "chiselblocks:block/ctm/factory/plate_gold/3",
+        "particle": "chiselblocks:block/ctm/factory/plate_gold/0",
+        "vertical": "chiselblocks:block/ctm/factory/plate_gold/2"
+    }
+}
