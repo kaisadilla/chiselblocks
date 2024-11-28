@@ -32,6 +32,10 @@ public class ChiselBlocks {
 
         ModItems.addToRegistry(modEventBus);
         ModBlocks.addToRegistry(modEventBus);
+        ModBlockEntities.addToRegistry(modEventBus);
+        ModMenuTypes.addToRegistry(modEventBus);
+        ModRecipes.addToRegistry(modEventBus);
+        ModRecipeTypes.addToRegistry(modEventBus);
         ModSounds.addToRegistry(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
@@ -69,6 +73,8 @@ public class ChiselBlocks {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            ModMenuTypes.registerScreens();
         }
     }
 }

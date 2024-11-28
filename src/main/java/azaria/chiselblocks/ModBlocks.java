@@ -41,6 +41,11 @@ public class ModBlocks {
         BLOCKS.register(eventBus);
     }
 
+    public static final RegistryObject<Block> CHISELING_TABLE = register(
+        "chiseling_table",
+        () -> new ChiselingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONECUTTER))
+    );
+
     public static class Stone {
         public static void init () {}
 

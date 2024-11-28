@@ -1,4 +1,6 @@
 {
+    "block.chiselblocks.chiseling_table": "Chiseling Table",
+
     "block.chiselblocks.sandstone.hieroglyph": "Sandstone Hieroglyph",
     "block.chiselblocks.stone.bordered_panel": "Bordered Stone Panel",
     "block.chiselblocks.stone.braid": "Braid Stone",
@@ -163,5 +165,7 @@
     "block.chiselblocks.factory.fan_broken": "Factory Block",
     "item.chiselblocks.factory.fan_broken.tooltip": "Broken Fan",
 
-    "itemGroup.chiselblocks": "Chisel Blocks"
+    "itemGroup.chiselblocks": "Chisel Blocks",
+
+    "container.chiseling_table": "Chiseling Table"
 }
